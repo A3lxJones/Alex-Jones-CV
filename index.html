@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Jones | Apprentice Software Engineer & Hockey Player</title>
+    <meta name="description"
+        content="Professional CV of Alex Jones — Apprentice Software Engineer at Kainos, Computing Systems student at Ulster University, and international ice hockey player." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+
+        code,
+        .font-mono {
+            font-family: "JetBrains Mono", monospace;
+        }
+    </style>
+    <script type="module" src="/src/main.ts"></script>
+</head>
+
+<body class="bg-dark text-light min-h-screen overflow-x-hidden">
+    <!-- ══════════════════════════════════════════ -->
+    <!-- SCROLL PROGRESS BAR                       -->
+    <!-- ══════════════════════════════════════════ -->
+    <div id="scroll-progress"></div>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- NAVBAR                                    -->
+    <!-- ══════════════════════════════════════════ -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo / Name -->
+            <a href="#hero" class="text-xl font-bold gradient-text tracking-tight">
+                AJ<span class="text-muted font-light">.dev</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#about"
+                    class="nav-link text-sm font-medium text-muted hover:text-light transition-colors">About</a>
+                <a href="#experience"
+                    class="nav-link text-sm font-medium text-muted hover:text-light transition-colors">Experience</a>
+                <a href="#education"
+                    class="nav-link text-sm font-medium text-muted hover:text-light transition-colors">Education</a>
+                <a href="#skills"
+                    class="nav-link text-sm font-medium text-muted hover:text-light transition-colors">Skills</a>
+                <a href="#sport"
+                    class="nav-link text-sm font-medium text-muted hover:text-light transition-colors">Sport</a>
+                <a href="#projects"
+                    class="nav-link text-sm font-medium text-muted hover:text-light transition-colors">Projects</a>
+                <a href="#contact"
+                    class="nav-link text-sm font-medium text-muted hover:text-light transition-colors">Contact</a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="mobile-menu-toggle" class="md:hidden text-light">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden flex-col items-center gap-4 pb-6 bg-dark/95 backdrop-blur-xl md:hidden">
+            <a href="#about"
+                class="nav-link text-sm font-medium text-muted hover:text-light transition-colors">About</a>
+            <a href="#experience"
+                class="nav-link text-sm font-medium text-muted hover:text-light transition-colors">Experience</a>
+            <a href="#education"
+                class="nav-link text-sm font-medium text-muted hover:text-light transition-colors">Education</a>
+            <a href="#skills"
+                class="nav-link text-sm font-medium text-muted hover:text-light transition-colors">Skills</a>
+            <a href="#sport"
+                class="nav-link text-sm font-medium text-muted hover:text-light transition-colors">Sport</a>
+            <a href="#projects"
+                class="nav-link text-sm font-medium text-muted hover:text-light transition-colors">Projects</a>
+            <a href="#contact"
+                class="nav-link text-sm font-medium text-muted hover:text-light transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- HERO SECTION                              -->
+    <!-- ══════════════════════════════════════════ -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Particle Background -->
+        <div id="particles" class="absolute inset-0 overflow-hidden"></div>
+
+        <!-- Gradient Orbs -->
+        <div class="absolute top-1/4 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float"></div>
+        <div
+            class="absolute bottom-1/4 -right-32 w-80 h-80 bg-secondary/20 rounded-full blur-3xl animate-float-delayed">
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <!-- Profile Image Placeholder -->
+            <div class="mb-8 reveal-scale">
+                <div class="w-40 h-40 mx-auto rounded-full image-placeholder animate-pulse-glow overflow-hidden">
+                    <img src="/pictures/alexjones-cv.jpg" alt="Alex Jones" class="w-full h-full object-cover" />
+
+                </div>
+
+                <!-- Name -->
+                <h1 class="text-5xl md:text-7xl font-black mb-4 reveal">
+                    <span class="gradient-text">Alex Jones</span>
+                </h1>
+
+                <!-- Typing Effect -->
+                <div class="text-xl md:text-2xl text-muted mb-8 h-10 reveal stagger-1">
+                    <span id="typing-text" class="typing-cursor font-mono"></span>
+                </div>
+
+                <!-- Quick Summary -->
+                <p class="text-lg text-muted/80 max-w-2xl mx-auto mb-10 reveal stagger-2">
+                    Building software at <span class="text-primary font-semibold">Kainos</span> ·
+                    Studying at <span class="text-secondary font-semibold">Ulster University</span> ·
+                    Representing <span class="text-accent font-semibold">Ireland</span> in Ice Hockey
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-wrap justify-center gap-4 reveal stagger-3">
+                    <a href="#contact" class="btn btn-primary btn-lg group">
+                        Get In Touch
+                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                    <a href="#projects"
+                        class="btn btn-outline btn-lg border-dark-lighter hover:bg-dark-lighter hover:border-dark-lighter text-light">
+                        View Projects
+                    </a>
+                </div>
+
+                <!-- Scroll Indicator -->
+                <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+                    <svg class="w-6 h-6 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                </div>
+            </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- ABOUT SECTION                             -->
+    <!-- ══════════════════════════════════════════ -->
+    <section id="about" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-mono text-primary tracking-widest uppercase mb-3 reveal">
+                    // About Me
+                </h2>
+                <h3 class="text-4xl md:text-5xl font-bold reveal stagger-1">
+                    Who I <span class="gradient-text">Am</span>
+                </h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Image Side -->
+                <div class="reveal-left">
+                    <div class="relative">
+                        <div class="w-full aspect-[4/5] rounded-2xl image-placeholder overflow-hidden">
+
+                            <img src="/pictures/alexcvice.jpg" alt="Alex Jones" class="w-full h-full object-cover" />
+                            <div class="flex flex-col items-center justify-center h-full text-muted">
+                            </div>
+                        </div>
+                        <!-- Decorative accent -->
+                        <div
+                            class="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary/30 rounded-2xl -z-10">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Side -->
+                <div class="reveal-right">
+                    <p class="text-lg text-muted leading-relaxed mb-6">
+                        I'm an <span class="text-light font-semibold">Apprentice Software Engineer</span> at
+                        <span class="text-primary font-semibold">Kainos</span>, where I work on building real-world
+                        software solutions while gaining hands-on industry experience. Alongside my career, I'm
+                        studying <span class="text-secondary font-semibold">Computing Systems</span> at
+                        <span class="text-secondary font-semibold">Ulster University</span>.
+                    </p>
+                    <p class="text-lg text-muted leading-relaxed mb-6">
+                        Outside of tech, sport is a massive part of my life. I've had the privilege of representing
+                        <span class="text-accent font-semibold">Ireland in Ice Hockey at U19 level</span>, with
+                        aspirations of progressing into the senior international squad. I also play
+                        <span class="text-light font-semibold">senior men's inline hockey</span> and coach the
+                        <span class="text-light font-semibold">U13 inline hockey team in Ballymena</span>.
+                    </p>
+                    <p class="text-lg text-muted leading-relaxed mb-8">
+
+                        I'm passionate about combining discipline from sport with problem-solving in software
+                        engineering to deliver high-quality work in everything I do.
+                    </p>
+
+                    <!-- Quick Stats -->
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="text-center p-4 bg-dark-light rounded-xl card-hover">
+                            <div class="text-3xl font-black gradient-text" data-count="2">0</div>
+                            <div class="text-xs text-muted mt-1">Ireland Caps</div>
+                        </div>
+                        <div class="text-center p-4 bg-dark-light rounded-xl card-hover">
+                            <div class="text-3xl font-black gradient-text" data-count="4">0</div>
+                            <div class="text-xs text-muted mt-1">Years Coaching</div>
+                        </div>
+                        <div class="text-center p-4 bg-dark-light rounded-xl card-hover">
+                            <div class="text-3xl font-black gradient-text" data-count="1">0</div>
+                            <div class="text-xs text-muted mt-1">Years Coding</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- EXPERIENCE SECTION                        -->
+    <!-- ══════════════════════════════════════════ -->
+    <section id="experience" class="py-24 px-6 bg-dark-light/30">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-mono text-primary tracking-widest uppercase mb-3 reveal">
+                    // Experience
+                </h2>
+                <h3 class="text-4xl md:text-5xl font-bold reveal stagger-1">
+                    Where I've <span class="gradient-text">Worked</span>
+                </h3>
+            </div>
+
+            <!-- Experience Cards -->
+            <div class="space-y-8">
+                <!-- Kainos -->
+                <div class="reveal">
+                    <div class="bg-dark-light border border-dark-lighter rounded-2xl p-8 card-hover tilt-card">
+                        <div class="flex flex-col md:flex-row md:items-start gap-6">
+                            <!-- Company Logo Placeholder -->
+                            <div
+                                class="w-16 h-16 shrink-0 rounded-xl image-placeholder overflow-hidden flex items-center justify-center">
+                                <img src="/pictures/kainoscv.jpg" alt="Kainos" class="w-14 h-14 object-contain" />
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                                    <h4 class="text-xl font-bold text-light">Apprentice Software Engineer</h4>
+                                    <span
+                                        class="badge badge-shimmer text-xs text-dark font-semibold px-3 py-1 mt-2 sm:mt-0">Current</span>
+                                </div>
+                                <p class="text-primary font-semibold mb-1">Kainos</p>
+                                <p class="text-sm text-muted mb-4">
+                                    <!-- Update your start date -->
+                                    <span>📅 September 2025 – Present</span> · <span>📍 Belfast, Northern Ireland</span>
+                                </p>
+                                <ul class="space-y-2 text-muted">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-primary mt-1.5">▸</span>
+                                        <span>Working as part of an agile software development team in SMART,
+                                            contributing to real client projects.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-primary mt-1.5">▸</span>
+                                        <span>Developing skills in modern technologies and frameworks through hands-on
+                                            project work.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-primary mt-1.5">▸</span>
+                                        <span> 4 Months training in being an AI Technologist giving me insight to
+                                            different capabilities in software. </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add More Experience Cards Below -->
+                <!-- Copy the card structure above and modify the content -->
+                <!--
+          <div class="reveal stagger-1">
+            <div class="bg-dark-light border border-dark-lighter rounded-2xl p-8 card-hover tilt-card">
+              ...
+            </div>
+          </div>
+          -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- EDUCATION SECTION                         -->
+    <!-- ══════════════════════════════════════════ -->
+    <section id="education" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-mono text-primary tracking-widest uppercase mb-3 reveal">
+                    // Education
+                </h2>
+                <h3 class="text-4xl md:text-5xl font-bold reveal stagger-1">
+                    My <span class="gradient-text">Education</span>
+                </h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Ulster University -->
+                <div class="reveal-left">
+                    <div class="bg-dark-light border border-dark-lighter rounded-2xl p-8 h-full card-hover tilt-card">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div>
+                                <h4 class="text-lg font-bold text-light">Ulster University</h4>
+                                <p class="text-sm text-muted">
+
+                                    2025 – Present
+                                </p>
+                            </div>
+                        </div>
+                        <h5 class="text-xl font-semibold text-secondary mb-3">BSc Computing Systems</h5>
+                        <p class="text-muted leading-relaxed mb-4">
+                            Studying core computing fundamentals including software development, databases, networking,
+                            and systems architecture. I actively engage in collaborative coursework, working in teams to
+                            develop real-world applications and solve complex technical problems. Through group projects
+                            and practical assignments, I've developed strong communication skills, learned to manage
+                            team dynamics, and gained experience contributing effectively to software development in an
+                            academic environment that mirrors professional practices.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge badge-outline badge-sm text-muted">Software Development</span>
+                            <span class="badge badge-outline badge-sm text-muted">Databases</span>
+                            <span class="badge badge-outline badge-sm text-muted">Networking</span>
+                            <span class="badge badge-outline badge-sm text-muted">Systems Architecture</span>
+                            <span class="badge badge-outline badge-sm text-muted">System Security</span>
+                            <span class="badge badge-outline badge-sm text-muted">Mathematics for Computer
+                                Science</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary School / Other Education -->
+                <div class="reveal-right">
+                    <div class="bg-dark-light border border-dark-lighter rounded-2xl p-8 h-full card-hover tilt-card">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div>
+                                <h4 class="text-lg font-bold text-light">
+                                    Slemish College
+                                </h4>
+                                <p class="text-sm text-muted">
+                                    2018-2025
+                                </p>
+                            </div>
+                        </div>
+                        <h5 class="text-xl font-semibold text-secondary mb-3">
+                            <!-- Add qualification, e.g. A-Levels / GCSEs -->
+                            A-Levels & GCSEs
+                        </h5>
+                        <p class="text-muted leading-relaxed mb-4">
+                            <!-- Add details about your secondary education -->
+                            Served as House Captain in my final year, taking on leadership responsibilities for
+                            organizing house events, mentoring younger students, and representing my house at school
+                            functions. Achieved 10 GCSEs graded A*-C*, demonstrating strong academic performance across
+                            a range of subjects. This role strengthened my communication, organizational, and leadership
+                            skills—qualities that have carried through into my professional career.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge badge-outline badge-sm text-muted">WJEC Media Studies</span>
+                            <span class="badge badge-outline badge-sm text-muted">BTEC Business</span>
+                            <span class="badge badge-outline badge-sm text-muted">BTEC Information Technologies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- SKILLS SECTION                            -->
+    <!-- ══════════════════════════════════════════ -->
+    <section id="skills" class="py-24 px-6 bg-dark-light/30">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-mono text-primary tracking-widest uppercase mb-3 reveal">
+                    // Skills
+                </h2>
+                <h3 class="text-4xl md:text-5xl font-bold reveal stagger-1">
+                    Tech <span class="gradient-text">Stack</span>
+                </h3>
+            </div>
+
+            <!-- Skill Categories -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Languages -->
+                <div class="reveal stagger-1">
+                    <div class="bg-dark-light border border-dark-lighter rounded-2xl p-6 h-full card-hover">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                </svg>
+                            </div>
+                            <h4 class="text-lg font-bold">Languages</h4>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-muted">TypeScript / JavaScript</span>
+                                    <span class="text-primary">85%</span>
+                                </div>
+                                <div class="h-2 bg-dark-lighter rounded-full overflow-hidden">
+                                    <div class="skill-fill h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-1000 ease-out"
+                                        data-width="85" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-muted">HTML / CSS</span>
+                                    <span class="text-primary">80%</span>
+                                </div>
+                                <div class="h-2 bg-dark-lighter rounded-full overflow-hidden">
+                                    <div class="skill-fill h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-1000 ease-out"
+                                        data-width="80" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-muted">Java</span>
+                                    <span class="text-primary">70%</span>
+                                </div>
+                                <div class="h-2 bg-dark-lighter rounded-full overflow-hidden">
+                                    <div class="skill-fill h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-1000 ease-out"
+                                        data-width="70" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-muted">SQL</span>
+                                    <span class="text-primary">75%</span>
+                                </div>
+                                <div class="h-2 bg-dark-lighter rounded-full overflow-hidden">
+                                    <div class="skill-fill h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-1000 ease-out"
+                                        data-width="80" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-muted">Python</span>
+                                    <span class="text-primary">60%</span>
+                                </div>
+                                <div class="h-2 bg-dark-lighter rounded-full overflow-hidden">
+                                    <div class="skill-fill h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-1000 ease-out"
+                                        data-width="60" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frameworks & Tools -->
+                <div class="reveal stagger-2">
+                    <div class="bg-dark-light border border-dark-lighter rounded-2xl p-6 h-full card-hover">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                                </svg>
+                            </div>
+                            <h4 class="text-lg font-bold">Frameworks & Tools</h4>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <!-- Add/remove your frameworks and tools -->
+                            <span
+                                class="badge badge-lg bg-dark-lighter border-dark-lighter text-muted hover:text-light hover:border-primary transition-colors cursor-default">Angular</span>
+                            <span
+                                class="badge badge-lg bg-dark-lighter border-dark-lighter text-muted hover:text-light hover:border-primary transition-colors cursor-default">Node.js</span>
+                            <span
+                                class="badge badge-lg bg-dark-lighter border-dark-lighter text-muted hover:text-light hover:border-primary transition-colors cursor-default">Tailwind
+                                CSS</span>
+                            <span
+                                class="badge badge-lg bg-dark-lighter border-dark-lighter text-muted hover:text-light hover:border-primary transition-colors cursor-default">Git</span>
+                            <span
+                                class="badge badge-lg bg-dark-lighter border-dark-lighter text-muted hover:text-light hover:border-primary transition-colors cursor-default">VS/IntelliJ
+                                Code</span>
+                            <span
+                                class="badge badge-lg bg-dark-lighter border-dark-lighter text-muted hover:text-light hover:border-primary transition-colors cursor-default">Docker</span>
+                            <span
+                                class="badge badge-lg bg-dark-lighter border-dark-lighter text-muted hover:text-light hover:border-primary transition-colors cursor-default">SQL</span>
+                            <span
+                                class="badge badge-lg bg-dark-lighter border-dark-lighter text-muted hover:text-light hover:border-primary transition-colors cursor-default">Agile
+                                / Scrum</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="reveal stagger-3">
+                    <div class="bg-dark-light border border-dark-lighter rounded-2xl p-6 h-full card-hover">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                            <h4 class="text-lg font-bold">Soft Skills</h4>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 p-3 bg-dark-lighter/50 rounded-xl">
+                                <span class="text-accent">🏒</span>
+                                <span class="text-muted">Team Leadership & Coaching</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-dark-lighter/50 rounded-xl">
+                                <span class="text-accent">🎯</span>
+                                <span class="text-muted">Problem Solving</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-dark-lighter/50 rounded-xl">
+                                <span class="text-accent">💬</span>
+                                <span class="text-muted">Communication</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-dark-lighter/50 rounded-xl">
+                                <span class="text-accent">⏱️</span>
+                                <span class="text-muted">Time Management</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-dark-lighter/50 rounded-xl">
+                                <span class="text-accent">🔄</span>
+                                <span class="text-muted">Adaptability</span>
+                            </div>
+                            <!-- Add more -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- SPORT SECTION                             -->
+    <!-- ══════════════════════════════════════════ -->
+    <section id="sport" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-mono text-primary tracking-widest uppercase mb-3 reveal">
+                    // Sport
+                </h2>
+                <h3 class="text-4xl md:text-5xl font-bold reveal stagger-1">
+                    Life on the <span class="gradient-text">Ice & Rink</span>
+                </h3>
+            </div>
+
+            <!-- Sport Cards -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Ireland Ice Hockey -->
+                <div class="reveal stagger-1">
+                    <div
+                        class="bg-dark-light border border-dark-lighter rounded-2xl overflow-hidden card-hover tilt-card">
+                        <!-- Image Area -->
+                        <div class="h-56 image-placeholder overflow-hidden">
+                            <!-- <img src="/images/ireland-hockey.jpg" alt="Ireland Ice Hockey" class="w-full h-full object-cover" /> -->
+                            <div class="flex flex-col items-center justify-center h-full text-muted">
+                                <svg class="w-12 h-12 mb-2 opacity-40" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span class="text-sm">Add Photo</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span
+                                    class="badge badge-shimmer text-xs text-dark font-semibold px-2 py-1">International</span>
+                                <span class="text-sm text-muted">🇮🇪 Ireland</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2">Ice Hockey — U19 International</h4>
+                            <p class="text-muted text-sm leading-relaxed">
+                                Represented Ireland at U19 level in ice hockey, competing on the international stage.
+                                Currently working towards selection for the senior national team. Bringing dedication,
+                                athleticism, and strategic thinking to every match, with a focus on continuous
+                                improvement
+                                and contributing to the growth of ice hockey in Ireland.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- First Aid -->
+                <div class="reveal stagger-1">
+                    <div
+                        class="bg-dark-light border border-dark-lighter rounded-2xl overflow-hidden card-hover tilt-card">
+                        <!-- Image Area -->
+                        <div class="h-56 image-placeholder overflow-hidden">
+                            <!-- <img src="/images/first-aid.jpg" alt="Sports First Aid" class="w-full h-full object-cover" /> -->
+                            <div class="flex flex-col items-center justify-center h-full text-muted">
+                                <svg class="w-12 h-12 mb-2 opacity-40" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-sm">Add Photo</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span
+                                    class="badge badge-shimmer text-xs text-dark font-semibold px-2 py-1">Certification</span>
+                                <span class="text-sm text-muted">🏥 Training</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2">Sports First Aid</h4>
+                            <p class="text-muted text-sm leading-relaxed">
+                                Currently undertaking comprehensive training in Sports First Aid, covering
+                                assessment and management of sports-related injuries including sprains, strains,
+                                fractures, and dislocations. Developing practical skills in injury assessment, CPR,
+                                AED use, and safe return-to-play procedures. Gaining knowledge in diagnosing
+                                injuries and implementing appropriate interventions in both training and competitive
+                                environments.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Senior Inline Hockey -->
+                <div class="reveal stagger-2">
+                    <div
+                        class="bg-dark-light border border-dark-lighter rounded-2xl overflow-hidden card-hover tilt-card">
+                        <!-- Image Area -->
+                        <div class="h-56 image-placeholder overflow-hidden">
+                            <!-- <img src="/images/inline-hockey.jpg" alt="Inline Hockey" class="w-full h-full object-cover" /> -->
+                            <div class="flex flex-col items-center justify-center h-full text-muted">
+                                <svg class="w-12 h-12 mb-2 opacity-40" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span class="text-sm">Add Photo</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span
+                                    class="badge badge-sm bg-secondary/20 border-secondary/30 text-secondary">Senior</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2">Senior Men's Inline Hockey</h4>
+                            <p class="text-muted text-sm leading-relaxed">
+                                Playing senior men's inline hockey, competing at a high level in league and
+                                tournament play. Bringing competitive experience, technical skill, and unwavering
+                                dedication
+                                to every game. Contributing to team success through effective communication, strategic
+                                positioning,
+                                and a passion for the sport.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coaching -->
+                <div class="reveal stagger-3">
+                    <div
+                        class="bg-dark-light border border-dark-lighter rounded-2xl overflow-hidden card-hover tilt-card">
+                        <!-- Image Area -->
+                        <div class="h-56 image-placeholder overflow-hidden">
+                            <!-- <img src="/images/coaching.jpg" alt="Coaching" class="w-full h-full object-cover" /> -->
+                            <div class="flex flex-col items-center justify-center h-full text-muted">
+                                <svg class="w-12 h-12 mb-2 opacity-40" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span class="text-sm">Add Photo</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="badge badge-sm bg-accent/20 border-accent/30 text-accent">Coach</span>
+                                <span class="text-sm text-muted">📍 Ballymena</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2">U13 Inline Hockey Coach</h4>
+                            <p class="text-muted text-sm leading-relaxed">
+                                Coaching the U13 inline hockey team in Ballymena, helping develop the next
+                                generation of players. Focused on skill development, teamwork, and instilling a love of
+                                the game.
+                                Providing mentorship, positive reinforcement, and age-appropriate training to foster
+                                both athletic
+                                growth and character development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- PROJECTS SECTION                          -->
+    <!-- ══════════════════════════════════════════ -->
+    <section id="projects" class="py-24 px-6 bg-dark-light/30">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-mono text-primary tracking-widest uppercase mb-3 reveal">
+                    // Projects
+                </h2>
+                <h3 class="text-4xl md:text-5xl font-bold reveal stagger-1">
+                    Things I've <span class="gradient-text">Built</span>
+                </h3>
+                <p class="text-muted mt-4 max-w-xl mx-auto reveal stagger-2">
+                    A collection of personal projects and things I've been working on. Click through to see more.
+                </p>
+            </div>
+
+            <!-- Project Cards -->
+            <div class="flex justify-center">
+                <div class="max-w-2xl w-full">
+                    <!-- Project 1 -->
+                    <div class="reveal stagger-1">
+                        <div
+                            class="bg-dark-light border border-dark-lighter rounded-2xl overflow-hidden card-hover tilt-card group">
+                            <!-- Project Image -->
+                            <div class="h-80 image-placeholder overflow-hidden relative">
+                                <!-- <img src="/images/project-1.jpg" alt="Project 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /> -->
+                                <div class="flex flex-col items-center justify-center h-full text-muted">
+                                    <svg class="w-10 h-10 mb-2 opacity-40" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <span class="text-xs">Screenshot</span>
+                                </div>
+                                <!-- Hover overlay -->
+                                <div
+                                    class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300">
+                                </div>
+                            </div>
+                            <div class="p-8">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <span class="badge badge-xs bg-accent/20 border-accent/30 text-accent">Work in
+                                        Progress</span>
+                                </div>
+                                <h4 class="text-lg font-bold mb-2 group-hover:text-primary transition-colors">
+                                    <!-- Project Name -->
+                                    Project Name
+                                </h4>
+                                <p class="text-muted text-sm leading-relaxed mb-4">
+                                    <!-- Project Description -->
+                                    Brief description of your project. What it does, what you learned, and what
+                                    technologies
+                                    you used.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span
+                                        class="badge badge-xs bg-primary/10 text-primary border-primary/20">TypeScript</span>
+                                    <span
+                                        class="badge badge-xs bg-primary/10 text-primary border-primary/20">React</span>
+                                    <!-- Add more tech used -->
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <a href="#" target="_blank"
+                                        class="text-muted hover:text-primary transition-colors flex items-center gap-1 text-sm">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                        </svg>
+                                        GitHub
+                                    </a>
+                                    <a href="#" target="_blank"
+                                        class="text-muted hover:text-secondary transition-colors flex items-center gap-1 text-sm">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+                                        Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- CONTACT SECTION                           -->
+    <!-- ══════════════════════════════════════════ -->
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-16">
+                <h2 class="text-sm font-mono text-primary tracking-widest uppercase mb-3 reveal">
+                    // Contact
+                </h2>
+                <h3 class="text-4xl md:text-5xl font-bold reveal stagger-1">
+                    Get In <span class="gradient-text">Touch</span>
+                </h3>
+                <p class="text-muted mt-4 max-w-xl mx-auto reveal stagger-2">
+                    Whether it's about a project, opportunity, or just to say hi — feel free to reach out!
+                </p>
+            </div>
+
+            <!-- Contact Links -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <!-- Email -->
+                <div class="reveal stagger-1">
+                    <a href="mailto:alexjones2006@icloud.com"
+                        class="block bg-dark-light border border-dark-lighter rounded-2xl p-6 card-hover text-center group">
+                        <div
+                            class="w-12 h-12 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold mb-1 group-hover:text-primary transition-colors">Email</h4>
+                        <p class="text-muted text-sm">alexjones2006@icloud.com</p>
+                    </a>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="reveal stagger-2">
+                    <a href="https://www.linkedin.com/public-profile/settings/?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BslIg0iuxTTKqY22Rpzl%2Fiw%3D%3D"
+                        target="_blank"
+                        class="block bg-dark-light border border-dark-lighter rounded-2xl p-6 card-hover text-center group">
+                        <div
+                            class="w-12 h-12 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold mb-1 group-hover:text-primary transition-colors">LinkedIn</h4>
+                        <p class="text-muted text-sm">Connect with me</p>
+                    </a>
+                </div>
+
+                <!-- GitHub -->
+                <div class="reveal stagger-3">
+                    <a href="https://github.com/A3lxJones" target="_blank"
+                        class="block bg-dark-light border border-dark-lighter rounded-2xl p-6 card-hover text-center group">
+                        <div
+                            class="w-12 h-12 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold mb-1 group-hover:text-primary transition-colors">GitHub</h4>
+                        <p class="text-muted text-sm">View my code</p>
+                    </a>
+                </div>
+
+                <!-- Phone / Other -->
+                <div class="reveal stagger-4">
+                    <a href="#"
+                        class="block bg-dark-light border border-dark-lighter rounded-2xl p-6 card-hover text-center group">
+                        <div
+                            class="w-12 h-12 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold mb-1 group-hover:text-primary transition-colors">Location</h4>
+                        <p class="text-muted text-sm">Northern Ireland</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- FOOTER                                    -->
+    <!-- ══════════════════════════════════════════ -->
+    <footer class="py-8 px-6 border-t border-dark-lighter">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-muted text-sm">
+                &copy; 2026 Alex Jones. Built with
+                <span class="text-primary">AI</span>,
+                <span class="text-secondary">OPUS 4.6</span> &
+                <span class="text-accent">TAILWIND</span>.
+            </p>
+            <div class="flex items-center gap-6">
+                <a href="https://github.com/A3lxJones" target="_blank"
+                    class="text-muted hover:text-light transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/public-profile/settings/?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BslIg0iuxTTKqY22Rpzl%2Fiw%3D%3D"
+                    target="_blank" class="text-muted hover:text-light transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- BACK TO TOP BUTTON                        -->
+    <!-- ══════════════════════════════════════════ -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-primary text-light shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-primary-light hover:scale-110 z-50">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+</body>
+
+</html>
